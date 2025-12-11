@@ -21,6 +21,7 @@ import {
 import { provideAnimations } from '@angular/platform-browser/animations'
 import { NZ_I18N } from 'ng-zorro-antd/i18n'
 import { zh_CN } from 'ng-zorro-antd/i18n'
+import { SpeedInsightsService } from 'src/services/speed-insights.service'
 
 registerLocaleData(zh)
 
@@ -45,5 +46,6 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideAnimations(),
     { provide: NZ_I18N, useValue: zh_CN },
+    SpeedInsightsService,
   ],
 }
